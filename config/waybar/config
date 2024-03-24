@@ -1,0 +1,101 @@
+{
+    "layer": "top",
+    "height": 45,
+    "spacing": 5,
+    "modules-left": ["hyprland/workspaces", "sway/scratchpad"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "cpu", "memory", "network", "battery", "custom/power"],
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "󰣇",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        },
+        "sort-by-number": true
+    },
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "timezone": "America/New_York",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>",
+        "format": "{:%Y-%m-%d %H:%M}",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "months":       "<span color='#ffead3'><b>{}</b></span>",
+                "days":         "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks":        "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays":     "<span color='#ffcc66'><b>{}</b></span>",
+                "today":        "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "max-length": 25
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+		"format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " ",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+		"scroll-step": 1,
+        "on-click": "pavucontrol"
+    },
+	"custom/power": {
+		"format": "",
+		"on-click": "swaynag -t warning -m 'Power Management' -b 'Logout' 'swaymsg exit' -b 'Suspend' 'swaymsg exec systemctl suspend' -b 'Shutdown' 'systemctl shutdown' --background 357EC9" 
+	}
+}
+

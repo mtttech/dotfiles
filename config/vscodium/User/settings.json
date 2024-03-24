@@ -1,0 +1,17 @@
+{
+  "breadcrumbs.enabled": false,
+  "chat.editor.wordWrap": "on",
+  "editor.fontFamily": "'Iosevka Nerd Font Propo', 'monospace', monospace",
+  "editor.fontSize": 13,
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "on",
+  "files.exclude": {
+      "**/__pycache__": true,
+      "**/*.pyc": true,
+      "**/poetry.lock": true
+  },
+  "window.titleBarStyle": "custom",
+  "window.menuBarVisibility": "compact",
+  "workbench.colorTheme": "Nord Deep",
+  "workbench.productIconTheme": "fluent-icons"
+}

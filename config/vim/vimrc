@@ -1,0 +1,42 @@
+" Vim defaults. Resets some variables, do first.
+set nocompatible
+
+filetype plugin indent on
+syntax on
+set encoding=UTF-8
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+
+
+set backspace=2
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
+set autoindent
+set cursorline
+set history=10000
+set nobackup
+set noswapfile
+set nowarn
+set nowrap
+set number
+set ruler
+set smartindent
+
+call plug#begin('~/.vim/plugged')
+set termguicolors
+let g:gruvbox_italic=1
+colorscheme gruvbox
+set background=dark
+hi Normal guibg=NONE ctermbg=NONE
+let g:terminal_ansi_colors = [
+    \ '#282828', '#cc241d', '#98971a', '#d79921',
+		\ '#458588', '#b16286', '#689d6a', '#a89984',
+		\ '#928374', '#fb4934', '#b8bb26', '#fabd2f',
+		\ '#83a598', '#d3869b', '#8ec07c', '#ebdbb2',
+\]

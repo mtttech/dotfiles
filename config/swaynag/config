@@ -1,0 +1,15 @@
+edge=top
+layer=overlay
+
+border-bottom-size=1
+button-border-size=1
+
+[warning]
+border=707d9d
+border-bottom=b6bccd
+button-background=1877F2
+button-gap=8
+button-padding=25
+button-text=FFFFFF
+details-background=357EC9
+text=FFFFFF

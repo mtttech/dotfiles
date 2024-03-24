@@ -1,0 +1,69 @@
+[[ $- != *i* ]] && return
+
+
+export EDITOR="vim"
+export HISTCONTROL=ignoredups:erasedups
+export HISTFILESIZE=2000
+export HISTSIZE=1000
+export TERM="kitty"
+
+
+if [ -d "$HOME/.local/bin" ];
+	then PATH="$HOME/.local/bin:$PATH"
+fi
+
+
+alias find='sudo find'
+alias ls='exa -alh --group-directories-first'
+alias grep='grep --color=auto'
+
+alias pacman='sudo pacman'
+alias paclist='pacman -Qqe'
+alias pacout='pacman -Qqe > ~/installed.txt'
+
+alias clone=cbc
+alias extract=ext
+
+
+shopt -s cdspell
+shopt -s checkwinsize
+shopt -s histappend
+
+
+# Codeberg.org Clone
+# $ clone user/repo
+function cbc () {
+	git clone https://codeberg.org/$1
+}
+
+# extract file
+function extract() {
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)  tar xvjf $1   ;;
+      *.tar.gz)   tar xvjf $1   ;;
+      *.bz2)      bunzip2 $1    ;;
+      *.rar)      unrar x $1    ;;
+      *.gz)       gunzip $1     ;;
+      *.tar)      tar xvf $1    ;;
+      *.tbz2)     tar xvjf $1   ;;
+      *.tgz)      tar xvzf $1   ;;
+      *.zip)      unzip $1      ;;
+      *.Z)        uncompress $1 ;;
+      *.7z)       7z x $1       ;;
+      *)          echo "'$1' cannot be extracted via >extract<" ;;
+    esac
+  else
+    echo "'$1' is not a valid file!"
+  fi
+}
+
+
+BOLD=$(tput bold)
+RESET=$(tput sgr0)
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+CYAN=$(tput setaf 6)
+
+PS1="\[${GREEN}\]\u\[${CYAN}\]@\[${GREEN}\]\h \[${YELLOW}\]>> \[${RESET}\]\[${RESET}\]"

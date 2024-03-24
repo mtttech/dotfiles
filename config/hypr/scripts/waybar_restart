@@ -1,0 +1,5 @@
+#!/bin/sh
+# Waybar Restart Script
+killall waybar
+
+waybar &
