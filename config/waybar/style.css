@@ -1,19 +1,20 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-	  font-family: 'Iosevka NF SemiBold', 'Fira Sans Semibold', FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
+  /* `otf-font-awesome` is required to be installed for icons */
+	font-family: 'Iosevka NF SemiBold', FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 window#waybar {
   background-color: rgba(23, 38, 39, 0.7);
-  border-bottom: 1px solid rgba(43, 58, 69, 0.6);
+  border-bottom: 2px solid rgba(53, 58, 69, 0.6);
   border-radius: 0px;
   color: #F60b8a;
 }
 
 #workspaces {
-  background: #c0caf5;
+  /*background: #c0caf5;*/
+  background: rgba(53, 58, 69, 1.0);
   margin: 5px 3px 5px 12px;
   padding: 0px 1px;
   border-radius: 15px;
@@ -22,30 +23,16 @@ window#waybar {
   color: #15161e;
 }
 
-button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
-    border: none;
-    border-radius: 0;
-}
-
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
 #workspaces button {
-    font-size: 400px;
-    margin: 4px 3px;
-    padding: 0 5px;
-    background-color: #7aa2f7;
-    border-radius: 15px;
-    border: 0px;
-    color: #15161e;
-    opacity: 0.5;
-    transition: all 0.3s ease-in-out;
+  background-color: #7aa2f7;
+  border-radius: 15px;
+  border: 0px;
+  color: #15161e;
+  font-size: 400px;
+  margin: 4px 3px;
+  opacity: 0.5;
+  padding: 0 5px;
+  transition: all 0.3s ease-in-out;
 }
 
 #workspaces button.active {
@@ -58,24 +45,24 @@ button:hover {
 }
 
 #workspaces button:hover {
-    background: #7aa2f7;
-    border-radius: 15px;
-    color: #15161e;
-    opacity: 1.0;
+  background: #7aa2f7;
+  border-radius: 15px;
+  color: #15161e;
+  opacity: 1.0;
 }
 
 #workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+  background-color: #64727D;
+  box-shadow: inset 0 -3px #ffffff;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+  background-color: #eb4d4b;
 }
 
 #mode {
-    background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
+  background-color: #64727D;
+  border-bottom: 3px solid #ffffff;
 }
 
 #clock,
