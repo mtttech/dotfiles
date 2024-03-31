@@ -67,12 +67,13 @@
         "max-length": 25
     },
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format": "{ifname}",
+        "format-wifi": "{signalStrength}% ",
+        "format-ethernet": "{ipaddr} ",
+        "tooltip-format": "{ifname} via {gwaddri} ",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname} ({ipaddr}/{cidr})",
+        "format-disconnected": "Not connected"
     },
     "pulseaudio": {
 		"format": "{volume}% {icon}",
