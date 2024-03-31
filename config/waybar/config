@@ -2,26 +2,28 @@
     "layer": "top",
     "height": 45,
     "spacing": 5,
-    "modules-left": ["hyprland/workspaces", "sway/scratchpad"],
+    "modules-left": ["hyprland/workspaces", "pulseaudio"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "cpu", "memory", "network", "battery", "custom/power"],
+    "modules-right": ["cpu", "memory", "network", "battery"],
     "hyprland/workspaces": {
-        "disable-scroll": true,
+        "active-only": false,
         "all-outputs": true,
-        "warp-on-scroll": false,
         "format": "{icon}",
         "format-icons": {
             "1": "󰣇",
-            "2": "",
+            "2": "",
             "3": "",
-            "4": "",
-            "5": "",
+            "4": "",
+            "5": "",
             "6": "",
             "urgent": "",
             "focused": "",
             "default": ""
         },
-        "sort-by-number": true
+        "on-click": "activate",
+        "persistent-workspaces": {
+            "*": 5
+        }
     },
     "sway/scratchpad": {
         "format": "{icon} {count}",
@@ -29,10 +31,6 @@
         "format-icons": ["", ""],
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
-    },
-    "tray": {
-        "icon-size": 21,
-        "spacing": 10
     },
     "clock": {
         "timezone": "America/New_York",
@@ -63,6 +61,9 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
+        "format-alt": "{icon} {time}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}%  ",
         "format-icons": ["", "", "", "", ""],
         "max-length": 25
     },
@@ -73,7 +74,8 @@
         "tooltip-format": "{ifname} via {gwaddri} ",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname} ({ipaddr}/{cidr})",
-        "format-disconnected": "Not connected"
+        "format-disconnected": "Not connected",
+        "max-length": 50
     },
     "pulseaudio": {
 		"format": "{volume}% {icon}",
@@ -93,10 +95,6 @@
         },
 		"scroll-step": 1,
         "on-click": "pavucontrol"
-    },
-	"custom/power": {
-		"format": "",
-		"on-click": "swaynag -t warning -m 'Power Management' -b 'Logout' 'swaymsg exit' -b 'Suspend' 'swaymsg exec systemctl suspend' -b 'Shutdown' 'systemctl shutdown' --background 357EC9" 
-	}
+    }
 }
 
