@@ -8,28 +8,21 @@ export HISTSIZE=1000
 export TERM="kitty"
 
 
-if [ -d ~/.local/bin ]; then
-  export PATH=~/.local/bin:$PATH
-fi
-
-# Go
-if [ -d ~/go ]; then
-  export GOPATH=~/go
-  export PATH=$GOPATH/bin:$PATH
+if [ -d "$HOME/.local/bin" ];
+	then PATH="$HOME/.local/bin:$PATH"
 fi
 
 
 alias find='sudo find'
-alias ls='exa -alh --group-directories-first'
+alias ls='exa -alh --grid --group-directories-first --icons=auto'
 alias grep='grep --color=auto'
 
 alias pacman='sudo pacman'
 alias paclist='pacman -Qqe'
-alias pacout='pacman -Qqe > ~/.config/archpkgs.txt'
+alias pacout='pacman -Qqe > ~/installed.txt'
 
-alias cbc=cbc
+alias clone=cbc
 alias extract=ext
-alias ghc=ghc
 
 
 shopt -s cdspell
@@ -38,20 +31,13 @@ shopt -s histappend
 
 
 # Codeberg.org Clone
-# $ cbc user/repo
-cbc() {
-	git clone https://codeberg.org/$1 ~/codeberg
-}
-
-# Github Clone
-# $ ghc user/repo
-ghc() {
-  git clone https://github.com/$1 ~/github
+# $ clone user/repo
+function cbc () {
+	git clone https://codeberg.org/$1
 }
 
 # extract file
-# $ ext file
-extract() {
+function extract() {
   if [ -f $1 ] ; then
     case $1 in
       *.tar.bz2)  tar xvjf $1   ;;
