@@ -62,20 +62,18 @@
         },
         "format": "{capacity}% {icon}",
         "format-alt": "{icon} {time}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}%  ",
-        "format-icons": ["", "", "", "", ""],
-        "max-length": 25
+        "format-charging": "{capacity}%  ",
+        "format-plugged": "{capacity}%   ",
+        "format-icons": [" ", " ", " ", " ", " "]
     },
     "network": {
         "format": "{ifname}",
-        "format-wifi": "{signalStrength}% ",
-        "format-ethernet": "{ipaddr} ",
-        "tooltip-format": "{ifname} via {gwaddri} ",
+        "format-wifi": "{signalStrength}%  ",
+        "format-ethernet": "{ipaddr}   ",
+        "tooltip-format": "{ifname} via {gwaddri}  ",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname} ({ipaddr}/{cidr})",
-        "format-disconnected": "Not connected",
-        "max-length": 50
+        "format-disconnected": "Not connected"
     },
     "pulseaudio": {
 		"format": "{volume}% {icon}",
