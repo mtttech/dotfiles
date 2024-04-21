@@ -15,39 +15,23 @@
   }
 
   window > box {
-      background-color: rgba(36, 40, 56, 0.8);
-      margin: 4px 4px 0 4px;
+      background-color: rgba(26, 50, 56, 1.0);
+      margin: 8px 4px 0 4px;
       transition-property: background-color;
       transition-duration: 0.5s;
   }
 
-  #workspaces {
-      border: 0px;
-      border-radius: 5px;
-      color: #15161e;
-      font-style: normal;
-      margin: 5px 3px 5px 12px;
-      padding: 0px 1px;
-  }
-  
   #workspaces button {
-      border: 0;
-      border-radius: 10px;
-      color: #15161e;
-      font-size: 400px;
-      margin: 0 2px;
-      min-width: 20px;
-      opacity: 0.5;
-      padding: 0 2px;
-      transition: all 0.3s ease-in-out;
+      font-size: 15px;
+      margin-left: 2px;
+      margin-right: 2px;
+      color: #dddddd;
   }
   
   #workspaces button:hover {
-      background: #f60aab;
-      opacity: 1.0;
-      transition: all 0.3s ease-in-out;
+      background: transparent;
   }
-  
+
   #mode {
       background-color: #64727D;
       border-bottom: 3px solid #000000;
