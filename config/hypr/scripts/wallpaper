@@ -1,0 +1,3 @@
+#!/bin/sh
+swww init
+swww img ~/wallpapers/wallhaven-x6wjkv.png
