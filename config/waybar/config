@@ -1,35 +1,41 @@
 {
     "layer": "top",
-    "height": 45,
+    "height": 40,
     "spacing": 5,
-    "modules-left": ["hyprland/workspaces", "pulseaudio"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["cpu", "memory", "network", "battery"],
-    
+    "modules-right": ["backlight", "pulseaudio", "cpu", "memory", "network", "battery"],
+
+    "hyprland/window": {
+        "format": "👉 {}",
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "🌎 $1",
+            "(.*) - fish": "> [$1]"
+        },
+        "separate-outputs": true
+    },
+
     "hyprland/workspaces": {
         "active-only": true,
         "all-outputs": true,
         "format": "{icon}",
         "format-icons": {
             "default": "",
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5",
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
             "6": "6",
             "7": "7",
             "8": "8",
             "9": "9",
+            "10": "10",
             "active": "󱓻",
             "urgent": "󱓻"
         },
         "persistent_workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": []
+            "*": 5
         },
         "disable-click": true
     },
@@ -49,7 +55,13 @@
             }
         }
     },
-    
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""]
+    },
+
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false
@@ -67,16 +79,16 @@
         },
         "format": "{capacity}% {icon}",
         "format-alt": "{icon} {time}",
-        "format-charging": "{capacity}%  ",
-        "format-plugged": "{capacity}%   ",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% w",
         "format-icons": [" ", " ", " ", " ", " "]
     },
     
     "network": {
         "format": "Disconnected",
         "format-icons": ["󰤟","󰤢","󰤥","󰖩"],
-        "format-wifi": "{signalStrength}%  ",
-        "format-ethernet": "{ipaddr}   ",
+        "format-wifi": "{signalStrength}% ",
+        "format-ethernet": "{ipaddr} ",
         "tooltip-format": "{ifname} via {gwaddri}  ",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname} ({ipaddr}/{cidr})",
@@ -103,4 +115,3 @@
         "on-click": "pavucontrol"
     }
 }
-

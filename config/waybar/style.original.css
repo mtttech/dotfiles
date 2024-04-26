@@ -1,0 +1,130 @@
+* {
+    border: 0;
+    border-radius: 10px;
+    color: #b4befe;
+    font-family: 'Iosevka NF Semibold', FontAwesome, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    margin: 0;
+    min-height: 45px;
+    padding: 0;
+}
+  
+window#waybar {
+    background: transparent;
+    margin-left: 20px;
+}
+
+window > box {
+    background-color: rgba(26, 50, 56, 1.0);
+    margin: 8px 4px 0 4px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+#idle_inhibitor {
+    padding-left: 15px;
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+  #workspaces button {
+      font-size: 15px;
+      margin-left: 2px;
+      margin-right: 2px;
+      color: #dddddd;
+  }
+  
+  #workspaces button:hover {
+      background: transparent;
+  }
+
+  #mode {
+      background-color: #64727D;
+      border-bottom: 3px solid #000000;
+  }
+  
+  #clock,
+  #battery,
+  #cpu,
+  #memory,
+  #network,
+  #pulseaudio,
+  #mode,
+  #idle_inhibitor,
+  #scratchpad {
+      padding: 0 10px;
+      color: #ffffff;
+  }
+  
+  #window,
+  #workspaces {
+      margin: 0 4px;
+  }
+  
+  #clock {
+      color: #90b1b1;
+      font-size: 16px;
+      font-weight: 900;
+  }
+  
+  #battery {
+      /*background-color: #ffffff;*/
+      color: #ff00f3;
+  }
+  
+  #battery.charging, #battery.plugged {
+      color: #ffffff;
+      background-color: #26A65B;
+  }
+  
+  #battery.critical:not(.charging) {
+      background-color: #f53c3c;
+      color: #ffffff;
+      animation-name: blink;
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+  }
+
+#upower {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding-left: 12px;
+  padding-right: 10px;
+}
+
+  #cpu {
+      /*background-color: #2ecc71;*/
+      color: #2ecc71;
+  }
+  
+  #memory {
+      /*background-color: #9b59b6;*/
+      color: #ff5736;
+  }
+  
+  #network {
+      /*background-color: #2980b9;*/
+      color: #2980b9;
+  }
+  
+  #pulseaudio {
+      /*background-color: #f1c40f;*/
+      color: #f1c40f;
+  }
+  
+  #pulseaudio.muted {
+      /*background-color: #90b1b1;*/
+      color: #90b1b1;
+  }
+  
+  #idle_inhibitor {
+      background-color: #2d3436;
+  }
+  
+  #idle_inhibitor.activated {
+      background-color: #ecf0f1;
+      color: #2d3436;
+  }
