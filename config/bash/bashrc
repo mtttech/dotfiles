@@ -8,21 +8,39 @@ export HISTSIZE=1000
 export TERM="kitty"
 
 
-if [ -d "$HOME/.local/bin" ];
-	then PATH="$HOME/.local/bin:$PATH"
+# Python
+if [ -d ~/.local/bin ]; then
+  export PATH=~/.local/bin:$PATH
 fi
+
+# Go
+if [ -d ~/go ]; then
+  export GOPATH=~/go
+  export PATH=$GOPATH/bin:$PATH
+fi
+
+# Cargo
+export PATH=~/.cargo/bin:$PATH
 
 
 alias find='sudo find'
-alias ls='exa -alh --grid --group-directories-first --icons=auto'
+alias ls='eza -alh --group-directories-first --icons=auto'
 alias grep='grep --color=auto'
 
+# Pacman
 alias pacman='sudo pacman'
-alias paclist='pacman -Qqe'
-alias pacout='pacman -Qqe > ~/installed.txt'
+alias paclst='pacman -Qqe'
+alias pacout='pacman -Qq | grep -vx "$( pacman -Qmq )" > ~/.config/archpkgs.txt'
 
-alias clone=cbc
-alias extract=ext
+# Switches
+alias poweroff='sudo shutdown now'
+alias rebootnow='sudo reboot now'
+
+# Python virtual environments
+alias venv='python -m venv .venv'
+alias activate='source .venv/bin/activate'
+
+alias ext=extract
 
 
 shopt -s cdspell
@@ -30,14 +48,9 @@ shopt -s checkwinsize
 shopt -s histappend
 
 
-# Codeberg.org Clone
-# $ clone user/repo
-function cbc () {
-	git clone https://codeberg.org/$1
-}
-
 # extract file
-function extract() {
+# $ ext file
+extract() {
   if [ -f $1 ] ; then
     case $1 in
       *.tar.bz2)  tar xvjf $1   ;;
