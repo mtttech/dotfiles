@@ -1,4 +1,5 @@
 #!/bin/sh
+
 # Waybar Restart Script
 killall waybar
 

@@ -1,0 +1,117 @@
+* {
+    border: 0px;
+    border-radius: 10px;
+    font-family: 'Iosevka NF Semibold', FontAwesome, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 0;
+    margin: 0;
+    min-height: 40px;
+  }
+  
+  window#waybar {
+    background: transparent;
+    margin-left: 20px;
+  }
+  
+  window > box {
+    background-color: rgba(16, 40, 46, 0.9);
+    margin: 5px 5px 0 5px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    border: 1.7px solid rgba(178, 213, 255, 0.9);
+  }
+  
+  #idle_inhibitor {
+    padding-left: 15px;
+    margin-right: 10px;
+    font-size: 22px;
+  }
+  
+  #workspaces {
+    border-radius: 5px;
+    margin: 1px 0 1px 5px;
+    padding: 0 5px;
+  }
+  
+  #workspaces button {
+    margin: 0 3px;
+    color: #ff5736;
+  }
+  
+  #workspaces button:hover {
+    background: transparent;
+  }
+  
+  #mode {
+    border: 1px solid #333331;
+    border-radius: 4px;
+  
+    color: #dddddd;
+  
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 4px;
+  
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  #backlight, #battery, #cpu, #memory, #network, #pulseaudio {
+    border-right: 0px solid #333331;
+    border-top: 0px solid #333331;
+    border-bottom: 0px solid #333331;
+    color: #26A65B;
+    font-size: 15px;
+    padding: 0 20px 0 0;
+  }
+
+  #backlight, #battery, #clock, #cpu, #memory, #network, #pulseaudio {
+    margin: 1px 0;
+  }
+
+  #backlight {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  
+  #battery {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    /* color: #eeeeee; */
+  }
+  
+  #clock {
+    border-radius: 4px;
+    color: #ff77ff;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 17px;
+  }
+
+  #cpu {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  #memory {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  #network {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  #pulseaudio {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  #window {
+    border-radius: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 17px;
+  }
