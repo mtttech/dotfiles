@@ -1,7 +1,7 @@
 * {
     border: 0px;
     font-family: 'Iosevka NF Semibold', FontAwesome, Arial, sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 900;
     padding: 0;
     margin: 0;
@@ -12,6 +12,10 @@
     background: transparent;
     margin-left: 20px;
   }
+
+  window#waybar.empty #window {
+    background-color: transparent;
+  }
   
   window > box {
     background-color: transparent;
@@ -20,19 +24,13 @@
     transition-duration: 0.5s;
   }
   
-  #idle_inhibitor {
-    padding-left: 15px;
-    margin-right: 10px;
-    font-size: 22px;
-  }
-  
   #workspaces {
     padding: 0 5px;
   }
   
   #workspaces button {
-    margin: 0 3px;
-    color: #ff5736;
+    color: #887788;
+    margin: 0 6px;
   }
   
   #workspaces button:hover {
@@ -57,24 +55,21 @@
   }
 
   #backlight, #battery, #clock, #cpu, #memory, #network, #pulseaudio, #window, #workspaces {
-    background-color: rgba(16, 40, 46, 1.0);
+    background-color: rgba(16, 40, 46, 0.9);
     border: 1.7px solid rgba(178, 213, 255, 0.9);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 25px;
     margin: 1px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 28px;
   }
   
   #clock {
     color: #ff77ff;
-    font-size: 17px;
   }
 
   #window {
-    color: #ffffff;
-    padding-left: 12px;
-    padding-right: 12px;
+    color: #808080;
+    padding: 0 20px;
   }

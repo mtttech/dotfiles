@@ -7,18 +7,14 @@
     "modules-right": ["backlight", "pulseaudio", "cpu", "memory", "network", "battery"],
 
     "hyprland/window": {
-        "format": "👉 {}",
-        "rewrite": {
-            "(.*) — Mozilla Firefox": "🌎 $1",
-            "(.*) - fish": "> [$1]"
-        },
+        "format": "<span size='11pt'>{}</span>",
         "separate-outputs": true
     },
 
     "hyprland/workspaces": {
         "active-only": true,
         "all-outputs": true,
-        "format": "{icon}",
+        "format": "<span size='17pt'>{icon}</span>",
         "format-icons": {
             "default": "",
             "1": "",
@@ -68,7 +64,7 @@
     },
     
     "memory": {
-        "format": "{}% "
+        "format": "{percentage}% "
     },
     
     "battery": {
@@ -96,7 +92,7 @@
     },
     
     "pulseaudio": {
-		"format": "{volume}% {icon}",
+		    "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " ",
@@ -111,7 +107,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-		"scroll-step": 1,
+		    "scroll-step": 1,
         "on-click": "pavucontrol"
     }
 }

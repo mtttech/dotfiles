@@ -23,6 +23,7 @@ fi
 export PATH=~/.cargo/bin:$PATH
 
 
+alias cat='bat'
 alias find='sudo find'
 alias ls='eza -alh --group-directories-first --icons=auto'
 alias grep='grep --color=auto'
@@ -30,7 +31,7 @@ alias grep='grep --color=auto'
 # Pacman
 alias pacman='sudo pacman'
 alias paclst='pacman -Qqe'
-alias pacout='pacman -Qq | grep -vx "$( pacman -Qmq )" > ~/.config/archpkgs.txt'
+alias pacout='pacman -Qq | grep -vx "$( pacman -Qmq )" > ~/dotfiles/config/archpkgs.txt'
 
 # Switches
 alias poweroff='sudo shutdown now'

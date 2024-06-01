@@ -1,4 +1,4 @@
 # dotfiles
 
-Just a collection of my dotfiles.
+Just a dumping ground for my dotfiles.
 
