@@ -1,17 +1,35 @@
 {
-  "breadcrumbs.enabled": false,
-  "chat.editor.wordWrap": "on",
-  "editor.fontFamily": "'Iosevka Nerd Font Propo', 'monospace', monospace",
-  "editor.fontSize": 13,
-  "editor.minimap.enabled": false,
-  "editor.wordWrap": "on",
-  "files.exclude": {
-      "**/__pycache__": true,
-      "**/*.pyc": true,
-      "**/poetry.lock": true
-  },
-  "window.titleBarStyle": "custom",
-  "window.menuBarVisibility": "compact",
-  "workbench.colorTheme": "Nord Deep",
-  "workbench.productIconTheme": "fluent-icons"
+    "breadcrumbs.enabled": false,
+    "catppuccin.accentColor": "blue",
+    "catppuccin.workbenchMode": "minimal",
+    "chat.editor.wordWrap": "on",
+    "editor.fontFamily": "'Iosevka NF SemiBold', 'monospace', monospace",
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.vscode": true,
+        "**/*.pyc": true,
+        "**/poetry.lock": true
+    },
+    "python.languageServer": "Jedi",
+    "python.setInterpreter": "/usr/bin/python",
+    "workbench.colorTheme": "Oro Theme",
+    "workbench.settings.applyToAllProfiles": [],
+    "explorer.confirmDelete": false,
+    "workbench.iconTheme": "sweet-vscode-icons",
+    "workbench.startupEditor": "none",
+    "explorer.confirmDragAndDrop": false,
+    "python.pythonPath": "/usr/bin/python",
+    "files.associations": {
+        "*.py": "python"
+    },
+    "go.toolsManagement.autoUpdate": true,
+    "editor.mouseWheelZoom": true,
+    "editor.codeActionsOnSave": {
+
+    },
+    "window.titleBarStyle": "custom",
+    "window.menuBarVisibility": "compact",
+    "workbench.sideBar.location": "right"
 }
