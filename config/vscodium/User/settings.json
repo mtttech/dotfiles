@@ -1,35 +1,38 @@
 {
-    "breadcrumbs.enabled": false,
-    "catppuccin.accentColor": "blue",
-    "catppuccin.workbenchMode": "minimal",
-    "chat.editor.wordWrap": "on",
-    "editor.fontFamily": "'Iosevka NF SemiBold', 'monospace', monospace",
-    "editor.minimap.enabled": false,
-    "editor.wordWrap": "on",
-    "files.exclude": {
+   "breadcrumbs.enabled": false,
+
+   "catppuccin.accentColor": "blue",
+   "catppuccin.workbenchMode": "minimal",
+
+   "chat.editor.wordWrap": "on",
+
+   "editor.fontFamily": "'Iosevka NF SemiBold', 'monospace', monspace",
+   "editor.minimap.enabled": false,
+   "editor.wordWrap": "on",
+
+   "explorer.confirmDelete": false,
+   "explorer.confirmDragAndDrop": false,
+
+   "files.associations": {
+        "*.py": "python"
+   },
+   "files.exclude": {
         "**/__pycache__": true,
         "**/.vscode": true,
         "**/*.pyc": true,
         "**/poetry.lock": true
     },
-    "python.languageServer": "Jedi",
-    "python.setInterpreter": "/usr/bin/python",
-    "workbench.colorTheme": "Oro Theme",
-    "workbench.settings.applyToAllProfiles": [],
-    "explorer.confirmDelete": false,
-    "workbench.iconTheme": "sweet-vscode-icons",
-    "workbench.startupEditor": "none",
-    "explorer.confirmDragAndDrop": false,
-    "python.pythonPath": "/usr/bin/python",
-    "files.associations": {
-        "*.py": "python"
-    },
-    "go.toolsManagement.autoUpdate": true,
-    "editor.mouseWheelZoom": true,
-    "editor.codeActionsOnSave": {
+    "git.autofetch": true,
 
-    },
-    "window.titleBarStyle": "custom",
+    "python.languageServer": "Jedi",
+    "python.pythonPath": "/usr/bin/python",
+
     "window.menuBarVisibility": "compact",
-    "workbench.sideBar.location": "right"
+    "window.titleBarStyle": "custom",
+
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "workbench.iconTheme": "catppuccin-macchiato",
+    "workbench.layoutControl.type": "toggles",
+    "workbench.sideBar.location": "right",
+    "workbench.startupEditor": "none"
 }
